@@ -32,5 +32,15 @@ when "reset"
   throttle.reset
   puts throttle.status
 else
-  puts "Help Screen!"  
+  puts "\nThrottling: "
+  puts "\n\n"
+  puts "\nthrottle limit [bandwidth]"
+  puts "\nthrottle limit 500KBps"
+  puts "\nthrottle limit 12Mbps"
+  puts "\n\n"
+  puts "\nGet the current status:"
+  puts "\n\n"
+  puts "\nthrottle status"
+  puts "\n\nTurn off:"
+  puts "\nthrottle reset"  
 end  

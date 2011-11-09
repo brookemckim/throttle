@@ -25,9 +25,7 @@ module Throttle
         :id        => 1,
         :bandwidth => parse_bandwidth(bandwidth)
       }
-      
-      puts options[:bandwidth]
-      
+            
       Pipe.new(options).set
       status
     end  

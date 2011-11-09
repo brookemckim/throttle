@@ -1,8 +1,6 @@
 module Throttle
   module Ipfw
     def ipfw(args)
-      cmd = "sudo ipfw #{args}"
-      puts "Performing #{cmd}"
       `sudo ipfw #{args}`
     end  
     

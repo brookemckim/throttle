@@ -48,7 +48,6 @@ module Throttle
     
     def set
       unless rule_id
-        puts "Creating rule"
         ipfw("add pipe #{self.id} ip from any to any")
       end
         
@@ -65,7 +64,6 @@ module Throttle
     
     def set_rule_id
       regex = "^(\d{5}) pipe #{self.id}.*$"
-      puts "Performing #{regex}"
       
       if /^(\d{5}) pipe #{self.id}.*$/.match(ipfw("list"))
         Regexp.last_match(1)
