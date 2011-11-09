@@ -22,7 +22,7 @@ case ARGV[0]
 when "limit"
   if ARGV[1]
     throttle.limit(ARGV[1])
-    puts throttle.status
+    puts "Currently throttled at : #{throttle.status}"
   else
     error("Please provide a valid bit rate to limit.")
   end    
@@ -32,15 +32,16 @@ when "reset"
   throttle.reset
   puts throttle.status
 else
+  puts "Throttle Help!"
+  
   puts "\nThrottling: "
-  puts "\n\n"
-  puts "\nthrottle limit [bandwidth]"
-  puts "\nthrottle limit 500KBps"
-  puts "\nthrottle limit 12Mbps"
-  puts "\n\n"
+  puts "throttle limit [bandwidth]"
+  puts "throttle limit 500KBps"
+  puts "throttle limit 12Mbps"
+  
   puts "\nGet the current status:"
-  puts "\n\n"
-  puts "\nthrottle status"
-  puts "\n\nTurn off:"
-  puts "\nthrottle reset"  
+  puts "throttle status"
+  
+  puts "\nTurn off:"
+  puts "throttle reset"  
 end  

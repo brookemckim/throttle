@@ -6,7 +6,7 @@ module Throttle
       pipes  = Pipe.all
       status = ""
       pipes.each do |p|
-        status += "\n#{p.id} - #{p.bandwidth}"
+        status += "#{p.bandwidth}"
       end  
       
       status = "No Limits." if status.empty?
