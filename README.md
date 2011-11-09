@@ -12,7 +12,7 @@ At the moment the code is REAAAAAAL ugly and needs much improvement. There are a
 ### Prerequisites 
 
 *  Mac OSX 10.5, 10.6, 10.7
-*  ruby 1.8.7
+*  ruby >= 1.8.7
 *  rubygems
 
 ### Installation 
@@ -27,6 +27,7 @@ From the command line:
 #### Start throttling
 
 Limit traffic to 100 Kilobits per second
+
 ```
 throttle limit 100Kbit/s
 ```
@@ -37,6 +38,12 @@ List all current limits in place.
 
 ```
 throttle status
+```
+
+#### Remove all limits
+
+```
+throttle reset
 ```
 
 
