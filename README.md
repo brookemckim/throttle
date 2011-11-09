@@ -29,7 +29,7 @@ From the command line:
 Limit traffic to 100 Kilobits per second
 
 ```
-throttle limit 100Kbit/s
+throttle limit 100Kbps
 ```
 
 #### Current Status
