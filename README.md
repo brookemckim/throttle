@@ -51,7 +51,7 @@ throttle reset
 
 Bandwidth must be specified in [Kilo/Mega][bits/Bytes]/s.
 
-*  500Kbps - 500 Kilobytes per second
+*  500Kbps - 500 Kilobits per second
 *  1MBps  - 1 Megabyte per second
 
 IPFW doesn't allow bandwidth greater than 268 MBps.
