@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.add_development_dependency "minitest"
-  s.add_development_dependency "cucumber"
-  s.add_development_dependency "mocha"
+  s.add_development_dependency 'minitest', '~> 4.6.0'
+  s.add_development_dependency 'mocha',    '~> 0.13.0'
 end

@@ -1,6 +1,5 @@
 require 'rubygems'
-
+require 'throttle'
 require 'minitest/autorun'
-require 'mocha'
+require 'mocha/setup'
 
-require 'lib/throttle'
