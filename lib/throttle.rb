@@ -7,5 +7,5 @@ require 'throttle/client'
 module Throttle
   def self.new(*args)
     Throttle::Client.new(*args)
-  end  
+  end
 end
