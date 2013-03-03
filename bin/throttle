@@ -7,13 +7,9 @@ rescue LoadError
   require 'throttle'
 end
 
-#throttle limit 500Kbps
-#throttle limit 600Kbps
-#throttle status
-#throttle reset
-
 def error(str)
   puts "Error: #{str}"
+  exit 1
 end
 
 throttle = Throttle.new
@@ -24,24 +20,25 @@ when "limit"
     throttle.limit(ARGV[1])
     puts "Currently throttled at : #{throttle.status}"
   else
-    error("Please provide a valid bit rate to limit.")
-  end    
+    error "Please provide a valid bit rate to limit."
+  end
 when "status"
   puts throttle.status
-when "reset"    
+when "reset"
   throttle.reset
   puts throttle.status
 else
   puts "Throttle Help!"
-  
+
   puts "\nThrottling: "
   puts "throttle limit [bandwidth]"
   puts "throttle limit 500KBps"
   puts "throttle limit 12Mbps"
-  
+
   puts "\nGet the current status:"
   puts "throttle status"
-  
+
   puts "\nTurn off:"
-  puts "throttle reset"  
-end  
+  puts "throttle reset"
+end
+
